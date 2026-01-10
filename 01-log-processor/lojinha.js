@@ -11,18 +11,19 @@ console.log("Ola, " + nomeCliente + ". Minha loja tem banana, abacate e batata p
 console.log("Ola, " + nomeAtendente + ". Desejo comprar uma banana e um abacate! :)");
 console.log("Ok, " + nomeCliente + ". (Calculando total, por favor aguarde...)");
 let valorTotal = preco2+preco3 ;
-console.log(nomeCliente + ", sua compra foi de " + valorTotal + ".");
+console.log(nomeCliente + ", sua compra foi de R$" + valorTotal + ".");
 console.log("Ei, " + nomeAtendente + ". Eu quero meu desconto!");
 console.log("Perdão, " + nomeCliente + ". Irei aplicar o desconto! (Calculando valor final...)");
-let valorFinal = valorTotal - 10/100*valorTotal ;
-console.log("O valor final foi de R$" + valorTotal + ". Aqui está seu recibo:");
+let valorFinal = valorTotal - valorTotal*0.1 ;
+console.log("O valor final foi de R$" + valorFinal.toFixed(2) + ". Aqui está seu recibo:");
 let recibo = `Lojinha do Osvaldo
 Cliente: ${clienteNoRecibo}
 Produtos:
   ${item2}
-    ${item3}
-    Subtotal: R$${valorTotal}
-    Desconto: 10%
-    Valor total: R$${valorFinal}
+  ${item3}
+Subtotal: R$${valorTotal}
+Desconto: 10%
+Valor total: R$${valorFinal.toFixed(2)}
 ---
 Obrigado pela visita ${nomeCliente}, volte sempre!`;
+console.log(recibo);
