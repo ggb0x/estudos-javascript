@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "target": "ES2022",      // Define que o JS final será moderno
+    "lib": ["ES2022", "DOM"], // Inclui as bibliotecas de Promise e recursos de navegador
+    "module": "ES2022",    // Ou "ESNext" dependendo do seu ambiente
+    "strict": true           // Mantenha isso para não ser um dev desleixado
+  }
+}
+
